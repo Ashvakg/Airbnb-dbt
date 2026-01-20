@@ -33,8 +33,13 @@ models:
     # Config indicated by + and applies to all files under models/example/
     bronze:
       +materialized: table
-      +schema: Bronze
+      +schema: bronze
     silver:
       +materialized: table
-      +schema: Silver
+      +schema: silver
+    gold:
+      +materialized: table
+      +schema: gold
+      ephemeral:
+        +materialized: ephemeral
 

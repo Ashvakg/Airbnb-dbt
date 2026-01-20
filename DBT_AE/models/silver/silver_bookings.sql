@@ -13,7 +13,7 @@ select
     booking_amount,
     cleaning_fee,
     service_fee,
-     + cleaning_fee + service_fee as total_booking_amount,
+    round(nights_booked * booking_amount, 2) + cleaning_fee + service_fee as total_booking_amount,
     booking_status,
     created_at
 from {{ ref('bronze_bookings') }}
